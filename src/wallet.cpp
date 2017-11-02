@@ -22,7 +22,7 @@ typedef vector<unsigned char> valtype;
 
 // we split the coinstake output in two to avoid concentrating
 // too many coins in one output. currently almost always split.
-unsigned int nStakeSplitAge = 10 * 24 * 60 * 60;; // 10 days
+unsigned int nStakeSplitAge = 10 * 24 * 60 * 60; // 10 days
 int64 nStakeCombineThreshold = 250 * COIN;
 
 //////////////////////////////////////////////////////////////////////////////
