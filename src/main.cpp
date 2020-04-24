@@ -2657,7 +2657,8 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
             }
         }
         // Enforce block.nVersion=2 rule that the coinbase starts with serialized block height
-        if (nVersion >= 2)
+        // Block v3 should be accepted until next version is introduced
+        if (nVersion < 3)
         {
             if ((!fTestNet && nHeight >= 710000) ||
                (fTestNet && nHeight >= 400000))
